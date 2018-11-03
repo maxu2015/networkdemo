@@ -18,6 +18,8 @@
 		5A1B809E20FE2D690025F300 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B809D20FE2D690025F300 /* NetManager.m */; };
 		5A25473520FEF1340006234D /* Yi_Homepage_Tag_Img_Yellow_Normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A25473320FEF1330006234D /* Yi_Homepage_Tag_Img_Yellow_Normal@3x.png */; };
 		5A295FBE211C0039008BFB82 /* MxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A295FBD211C0039008BFB82 /* MxLayout.m */; };
+		5A315D82217D967B00895E95 /* test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A315D81217D967B00895E95 /* test@2x.png */; };
+		5A315D84217DAA1C00895E95 /* test2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A315D83217DAA1C00895E95 /* test2@2x.png */; };
 		5A710AA82167525100F6F6AC /* MXRunloopObserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A710AA72167525100F6F6AC /* MXRunloopObserverManager.m */; };
 		5AC32051215CDD790064E86F /* Yi_Common_loading_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC3204F215CDD790064E86F /* Yi_Common_loading_default@2x.png */; };
 		5AC32052215CDD790064E86F /* Yi_Common_loading_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AC32050215CDD790064E86F /* Yi_Common_loading_default@3x.png */; };
@@ -72,6 +74,8 @@
 		5A25473320FEF1330006234D /* Yi_Homepage_Tag_Img_Yellow_Normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yi_Homepage_Tag_Img_Yellow_Normal@3x.png"; sourceTree = "<group>"; };
 		5A295FBC211C0039008BFB82 /* MxLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MxLayout.h; sourceTree = "<group>"; };
 		5A295FBD211C0039008BFB82 /* MxLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MxLayout.m; sourceTree = "<group>"; };
+		5A315D81217D967B00895E95 /* test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test@2x.png"; sourceTree = "<group>"; };
+		5A315D83217DAA1C00895E95 /* test2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test2@2x.png"; sourceTree = "<group>"; };
 		5A710AA62167525100F6F6AC /* MXRunloopObserverManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MXRunloopObserverManager.h; sourceTree = "<group>"; };
 		5A710AA72167525100F6F6AC /* MXRunloopObserverManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXRunloopObserverManager.m; sourceTree = "<group>"; };
 		5AC3204F215CDD790064E86F /* Yi_Common_loading_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yi_Common_loading_default@2x.png"; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 		5AC32053215CDE2C0064E86F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				5A315D83217DAA1C00895E95 /* test2@2x.png */,
+				5A315D81217D967B00895E95 /* test@2x.png */,
 				5AC32054215CDE800064E86F /* ImageTool.h */,
 				5AC32055215CDE800064E86F /* ImageTool.m */,
 			);
@@ -336,12 +342,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A315D84217DAA1C00895E95 /* test2@2x.png in Resources */,
 				5A1B807720FE2A7E0025F300 /* LaunchScreen.storyboard in Resources */,
 				5A1B807420FE2A7E0025F300 /* Assets.xcassets in Resources */,
 				5AC32052215CDD790064E86F /* Yi_Common_loading_default@3x.png in Resources */,
 				5AC9A5612104195A00D2903B /* MainCollectionViewController.xib in Resources */,
 				5A1B807220FE2A790025F300 /* Main.storyboard in Resources */,
 				5AC32051215CDD790064E86F /* Yi_Common_loading_default@2x.png in Resources */,
+				5A315D82217D967B00895E95 /* test@2x.png in Resources */,
 				5AC9A56621041A7700D2903B /* CoverCollectionViewCell.xib in Resources */,
 				5A25473520FEF1340006234D /* Yi_Homepage_Tag_Img_Yellow_Normal@3x.png in Resources */,
 			);

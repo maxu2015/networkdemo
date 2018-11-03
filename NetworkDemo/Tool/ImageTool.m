@@ -66,14 +66,54 @@
 
     });
 }
+/*
+ CGFloat rHeight=image.size.width*3/4;
+ [image drawInRect:CGRectMake(0, (image.size.height/2-rHeight/2)*rate, image.size.width,rHeight )];
+
+ */
+- (UIImage *)cutImage:(NSString *)imageName
+        imageViewSize:(CGSize)size
+             clipRect:(CGRect)rect {
+    UIImage *originImage=[self imageFromBundleWithName:imageName];
+   return  [self cutOryImage:originImage imageViewSize:size clipRect:rect];
+
+}
+- (UIImage *)cutOryImage:(UIImage *)image
+        imageViewSize:(CGSize)size
+             clipRect:(CGRect)rect {
+    //图片大小和实际显示大小的比例
+    CGFloat scale_width = image.size.width/size.width;
+    CGFloat scale_height = image.size.height/size.height;
+    //实际剪切区域
+    CGRect clipRect = CGRectMake(rect.origin.x * scale_width,
+                                 rect.origin.y * scale_height,
+                                 rect.size.width * scale_width,
+                                 rect.size.height * scale_width);
+    
+    //开启图形上下文
+    UIGraphicsBeginImageContext(clipRect.size);
+    //画图
+    [image drawAtPoint:CGPointMake(-clipRect.origin.x, -clipRect.origin.y)];
+    
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
 - (void)imageByRedrawWithImageName:(NSString *)originImageName size:(CGSize)size redrawFinsh:(void(^)(UIImage *reImage))redrawFinsh{
     dispatch_async(self.theQueue, ^{
-        UIGraphicsBeginImageContextWithOptions(size, NO, 0);
-        CGRect rect=CGRectMake(0, 0, size.width, size.height);
-        UIImage *originImage=[self imageFromBundleWithName:originImageName];
-        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
-        [path addClip];
-        [originImage drawInRect:rect];
+         UIImage *originImage=[self imageFromBundleWithName:originImageName];
+        UIGraphicsBeginImageContextWithOptions(originImage.size, NO, 0);
+        CGRect rect=CGRectMake(0, 25, size.width, size.height);
+       
+        CGFloat rHeight=originImage.size.width*3/4;
+        CGRect rect2=CGRectMake(0, -(originImage.size.height/2-rHeight/2)*0.78, originImage.size.width, rHeight);
+
+//        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
+//        [path addClip];
+        [originImage drawInRect:rect2];
  
         UIImage *resultImage=UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();

@@ -16,6 +16,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)imageByRedrawWithImageName:(NSString *)originImageName size:(CGSize)size redrawFinsh:(void(^)(UIImage *reImage))redrawFinsh;
 - (void)imageByIOWithImageName:(NSString *)originImageName size:(CGSize)size redrawFinsh:(void(^)(UIImage *reImage))redrawFinsh;
 - (void)imageByBitmapWithImageName:(NSString *)originImageName size:(CGSize)size redrawFinsh:(void(^)(UIImage *reImage))redrawFinsh;
+//- (UIImage *)cutImage:(UIImage *)image
+//        imageViewSize:(CGSize)size
+//             clipRect:(CGRect)rect;
+- (UIImage *)cutImage:(NSString *)imageName
+        imageViewSize:(CGSize)size
+             clipRect:(CGRect)rect;
 @end
 
 NS_ASSUME_NONNULL_END
